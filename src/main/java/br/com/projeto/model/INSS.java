@@ -7,10 +7,6 @@ import java.math.RoundingMode;
 
 public class INSS extends Imposto {
 
-    public INSS(Imposto outro) {
-        super(outro);
-    }
-
     private BigDecimal aliquotaInss;
 
     @Override
