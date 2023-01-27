@@ -18,7 +18,15 @@ public class CalculadoraSalarioLiquidoTeste {
         CalculadoraImpostos calculadora = new CalculadoraImpostos();
 
         assertEquals(new BigDecimal("700.00"), calculadora.calcular(salario, new INSS(null)));
-
     }
 
+    @Test
+    @DisplayName("Calcular o valor do imposto IRRF")
+    void calcularOValorDoImpostoIrrf() {
+        Salario salario = new Salario(new BigDecimal("6000"),0, new BigDecimal("0"));
+        CalculadoraImpostos calculadora = new CalculadoraImpostos();
+
+        assertEquals(new BigDecimal("1375.00"), calculadora.calcular(salario, new IRRF(null)));
+
+    }
 }
