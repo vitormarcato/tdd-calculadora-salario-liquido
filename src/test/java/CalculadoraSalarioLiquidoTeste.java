@@ -1,5 +1,6 @@
 import br.com.projeto.model.CalculadoraImpostos;
 import br.com.projeto.model.INSS;
+import br.com.projeto.model.IRRF;
 import br.com.projeto.model.Salario;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
@@ -26,7 +27,7 @@ public class CalculadoraSalarioLiquidoTeste {
         Salario salario = new Salario(new BigDecimal("6000"),0, new BigDecimal("0"));
         CalculadoraImpostos calculadora = new CalculadoraImpostos();
 
-        assertEquals(new BigDecimal("1375.00"), calculadora.calcular(salario, new IRRF(null)));
+        assertEquals(new BigDecimal("1650.00"), calculadora.calcular(salario, new IRRF(null)));
 
     }
 }
