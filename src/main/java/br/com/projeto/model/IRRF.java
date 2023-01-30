@@ -3,7 +3,7 @@ package br.com.projeto.model;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
-public class IRRF extends Imposto {
+public class IRRF extends Desconto {
 
     private BigDecimal aliquotaIrrf;
     protected BigDecimal baseDeCalculoIrrf;

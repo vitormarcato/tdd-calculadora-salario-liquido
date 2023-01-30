@@ -1,9 +1,8 @@
 package br.com.projeto.model;
 
 import java.math.BigDecimal;
-import java.math.RoundingMode;
 
-public class Dependentes extends Imposto {
+public class Dependentes extends Desconto {
 
     private BigDecimal deducaoPorDependente = new BigDecimal("189.59");
     @Override

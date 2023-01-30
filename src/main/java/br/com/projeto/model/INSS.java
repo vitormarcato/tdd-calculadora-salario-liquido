@@ -3,7 +3,7 @@ package br.com.projeto.model;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
-public class INSS extends Imposto {
+public class INSS extends Desconto {
 
     private BigDecimal aliquotaInss;
 
