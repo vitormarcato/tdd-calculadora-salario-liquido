@@ -1,7 +1,4 @@
-import br.com.projeto.model.CalculadoraImpostos;
-import br.com.projeto.model.INSS;
-import br.com.projeto.model.IRRF;
-import br.com.projeto.model.Salario;
+import br.com.projeto.model.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -14,7 +11,7 @@ public class CalculadoraSalarioLiquidoTeste {
     @Test
     @DisplayName("Calcular valor do imposto INSS")
     void calcularValorDoImpostoInss() {
-        Salario salario = new Salario(new BigDecimal("5000"),0, new BigDecimal("0"));
+        Salario salario = new Salario(new BigDecimal("5000"),new BigDecimal("0"), new BigDecimal("0"));
         CalculadoraImpostos calculadora = new CalculadoraImpostos();
 
         assertEquals(new BigDecimal("700.00"), calculadora.calcular(salario, new INSS()));
@@ -23,7 +20,7 @@ public class CalculadoraSalarioLiquidoTeste {
     @Test
     @DisplayName("Calcular o valor do imposto IRRF")
     void calcularOValorDoImpostoIrrf() {
-        Salario salario = new Salario(new BigDecimal("5000"),0, new BigDecimal("0"));
+        Salario salario = new Salario(new BigDecimal("5000"),new BigDecimal("0"), new BigDecimal("0"));
         CalculadoraImpostos calculadora = new CalculadoraImpostos();
 
         assertEquals(new BigDecimal("967.50"), calculadora.calcular(salario, new IRRF()));
@@ -33,10 +30,10 @@ public class CalculadoraSalarioLiquidoTeste {
     @Test
     @DisplayName("Calcular a dedução de valor por dependente")
     void calcularADeduçãoDeValorPorDependente() {
-        Salario salario = new Salario(new BigDecimal("5000"),2, new BigDecimal("0"));
+        Salario salario = new Salario(new BigDecimal("5000"),new BigDecimal("2"), new BigDecimal("0"));
         CalculadoraImpostos calculadora = new CalculadoraImpostos();
 
-        assertEquals(new BigDecimal("379.18"), calculadora.calcular((salario, new Dependentes())));
+        assertEquals(new BigDecimal("379.18"), calculadora.calcular(salario, new Dependentes()));
 
     }
 }

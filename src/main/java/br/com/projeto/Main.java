@@ -9,7 +9,7 @@ import java.math.BigDecimal;
 
 public class Main {
     public static void main(String[] args) {
-        Salario salario = new Salario(new BigDecimal("5000"),0, new BigDecimal("0"));
+        Salario salario = new Salario(new BigDecimal("5000"),new BigDecimal("0"), new BigDecimal("0"));
         CalculadoraImpostos calculadora = new CalculadoraImpostos();
 
         System.out.println(salario.getSalarioBruto());

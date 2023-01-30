@@ -5,10 +5,10 @@ import java.math.BigDecimal;
 public class Salario {
 
     private BigDecimal salarioBruto;
-    private int numeroDependentes;
+    private BigDecimal numeroDependentes;
     private BigDecimal descontos;
 
-    public Salario(BigDecimal salarioBruto, int numeroDependentes, BigDecimal descontos) {
+    public Salario(BigDecimal salarioBruto, BigDecimal numeroDependentes, BigDecimal descontos) {
         this.salarioBruto = salarioBruto;
         this.numeroDependentes = numeroDependentes;
         this.descontos = descontos;
@@ -22,11 +22,11 @@ public class Salario {
         this.salarioBruto = salarioBruto;
     }
 
-    public int getNumeroDependentes() {
+    public BigDecimal getNumeroDependentes() {
         return numeroDependentes;
     }
 
-    public void setNumeroDependentes(int numeroDependentes) {
+    public void setNumeroDependentes(BigDecimal numeroDependentes) {
         this.numeroDependentes = numeroDependentes;
     }
 
