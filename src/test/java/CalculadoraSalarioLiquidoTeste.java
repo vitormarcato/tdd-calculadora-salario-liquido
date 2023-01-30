@@ -29,4 +29,14 @@ public class CalculadoraSalarioLiquidoTeste {
         assertEquals(new BigDecimal("967.50"), calculadora.calcular(salario, new IRRF()));
 
     }
+
+    @Test
+    @DisplayName("Calcular a dedução de valor por dependente")
+    void calcularADeduçãoDeValorPorDependente() {
+        Salario salario = new Salario(new BigDecimal("5000"),2, new BigDecimal("0"));
+        CalculadoraImpostos calculadora = new CalculadoraImpostos();
+
+        assertEquals(new BigDecimal("379.18"), calculadora.calcular((salario, new Dependentes())));
+
+    }
 }
