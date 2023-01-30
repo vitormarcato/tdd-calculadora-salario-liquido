@@ -12,7 +12,7 @@ public class CalculadoraSalarioLiquidoTeste {
     @DisplayName("Calcular valor do imposto INSS")
     void calcularValorDoImpostoInss() {
         Salario salario = new Salario(new BigDecimal("5000"),new BigDecimal("0"), new BigDecimal("0"));
-        CalculadoraImpostos calculadora = new CalculadoraImpostos();
+        CalculadoraDescontos calculadora = new CalculadoraDescontos();
 
         assertEquals(new BigDecimal("700.00"), calculadora.calcular(salario, new INSS()));
     }
@@ -21,7 +21,7 @@ public class CalculadoraSalarioLiquidoTeste {
     @DisplayName("Calcular o valor do imposto IRRF")
     void calcularOValorDoImpostoIrrf() {
         Salario salario = new Salario(new BigDecimal("5000"),new BigDecimal("0"), new BigDecimal("0"));
-        CalculadoraImpostos calculadora = new CalculadoraImpostos();
+        CalculadoraDescontos calculadora = new CalculadoraDescontos();
 
         assertEquals(new BigDecimal("967.50"), calculadora.calcular(salario, new IRRF()));
 
@@ -31,9 +31,20 @@ public class CalculadoraSalarioLiquidoTeste {
     @DisplayName("Calcular a dedução de valor por dependente")
     void calcularADeduçãoDeValorPorDependente() {
         Salario salario = new Salario(new BigDecimal("5000"),new BigDecimal("2"), new BigDecimal("0"));
-        CalculadoraImpostos calculadora = new CalculadoraImpostos();
+        CalculadoraDescontos calculadora = new CalculadoraDescontos();
 
         assertEquals(new BigDecimal("379.18"), calculadora.calcular(salario, new Dependentes()));
+
+    }
+
+    @Test
+    @DisplayName("Calcular a dedução de outros descontos")
+    void calcularADeduçãoDeOutrosDescontos() {
+        Salario salario = new Salario(new BigDecimal("5000"),new BigDecimal("2"), new BigDecimal("250"));
+        CalculadoraDescontos calculadora = new CalculadoraDescontos();
+
+        assertEquals(new BigDecimal("250.00"), calculadora.calcular(salario, new OutrosDescontos()));
+
 
     }
 }
