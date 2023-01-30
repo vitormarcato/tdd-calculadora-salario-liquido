@@ -11,7 +11,7 @@ public class IRRF extends Imposto {
     @Override
     protected BigDecimal efetuarCalculo(Salario salario) {
 
-        baseDeCalculoIrrf = salario.getSalarioBruto().subtract(new INSS().efetuarCalculo(salario));
+        baseDeCalculoIrrf = salario.getSalarioBruto().subtract(new INSS().efetuarCalculo(salario)).subtract(new Dependentes().efetuarCalculo(salario));
 
         if (baseDeCalculoIrrf.compareTo((new BigDecimal("1903.98"))) <= 0) {
             aliquotaIrrf = new BigDecimal("0");

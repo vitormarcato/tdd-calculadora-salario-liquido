@@ -1,7 +1,5 @@
 package br.com.projeto.model;
 
-import org.w3c.dom.ls.LSOutput;
-
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
