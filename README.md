@@ -5,7 +5,7 @@ Esta aplicação demostra o valor de salário líquido mensal a partir do salár
 <img src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge"/>
 
 ## Objetivo
-Desenvolver uma aplicação aplicando TDD e padrões de projeto comportamentais.
+ [x] Desenvolver uma aplicação aplicando TDD e padrões de projeto comportamentais.
 
  [ ] Strategy: simplificar lógica e reduzir "If-else" no código. Aplicação: Criou-se classes específicas para cada imposto calculado. 
 
