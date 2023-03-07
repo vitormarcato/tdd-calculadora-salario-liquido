@@ -48,7 +48,7 @@ Também obrigatório, o IRRF é calculado depois que o INSS e um valor legal por
 | :placard: Vitrine.Dev | https://cursos.alura.com.br/vitrinedev/vitormarcato     |
 | -------------  | --- |
 | :sparkles: Nome        | TDD: Calculadora de salário líquido
-| :label: Tecnologias | tdd, java, design patterns 
+| :label: Tecnologias | tdd, java, JUnit, design patterns 
 | :rocket: URL         | https://github.com/vitormarcato/tdd-calculadora-salario-liquido
 | :fire: Desafio     | https://github.com/vitormarcato/tdd-calculadora-salario-liquido
 
